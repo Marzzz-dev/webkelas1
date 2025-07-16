@@ -1,0 +1,76 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #eaf6ff;
+  margin: 0;
+  padding: 0;
+}
+.loader {
+  position: fixed;
+  top:0; left:0; right:0; bottom:0;
+  background: #0a2342;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  flex-direction: column;
+}
+.neon-spinner {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 50%;
+  border: 5px solid #00eaff;
+  border-top: 5px solid #1a8cff;
+  animation: spin 1s linear infinite, neon 1.5s alternate infinite;
+  box-shadow: 0 0 20px #00eaff, 0 0 40px #1a8cff;
+}
+@keyframes spin {
+  100% { transform: rotate(360deg);}
+}
+@keyframes neon {
+  0% { box-shadow: 0 0 10px #00eaff, 0 0 20px #1a8cff;}
+  100% { box-shadow: 0 0 30px #00eaff, 0 0 60px #1a8cff;}
+}
+.block {
+  background: #fff;
+  margin: 30px auto;
+  padding: 30px 40px;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 18px;
+  box-shadow: 0 0 18px #00eaff88, 0 0 4px #1a8cff44;
+  font-size: 1.3em;
+  color: #0a2342;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+  user-select: none;
+}
+.block:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #00eaff, 0 0 10px #1a8cff;
+}
+.content-area {
+  margin: 40px auto 0 auto;
+  width: 90%;
+  max-width: 600px;
+  min-height: 120px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 0 10px #00eaff33;
+  padding: 30px;
+  font-size: 1.1em;
+  color: #0a2342;
+}
+.school-profile-bg {
+  background: linear-gradient(135deg, #1a8cff 0%, #00eaff 100%);
+  border-radius: 16px;
+  padding: 25px;
+  color: #fff;
+  box-shadow: 0 0 30px #00eaff, 0 0 10px #1a8cff;
+  margin-top: 10px;
+}
+.school-profile-bg h2 {
+  margin-top: 0;
+  text-shadow: 0 0 10px #fff, 0 0 20px #00eaff;
+}
